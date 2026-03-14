@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Bravoo</title>
+    <meta name="description" content="Toutes les réponses à tes questions sur Bravoo : fonctionnement de l'IA, formations disponibles, tarifs, données personnelles, utilisation hors ligne...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-section {
+            padding: var(--section-spacing) 0;
+            background: var(--bg-page);
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius-card);
+            padding: 32px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .faq-item h3::before {
+            content: 'Q.';
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--primary);
+            background: var(--bg-section-alt);
+            padding: 4px 10px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .faq-categories {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .faq-category {
+            background: var(--white);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: var(--border-radius-pill);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .faq-category:hover,
+        .faq-category.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .faq-item {
+                padding: 24px 20px;
+            }
+
+            .faq-item h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="catalogue.html">Catalogue</a>
+                    <a href="pricing.html">Tarifs</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#" class="cta-nav">Commencer gratuitement</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero FAQ -->
+    <section class="hero hero-compact">
+        <div class="container">
+            <div class="section-header">
+                <h1>Questions fréquentes</h1>
+                <p>Tout ce que tu dois savoir sur Bravoo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-categories fade-in">
+                <span class="faq-category active">Toutes</span>
+                <span class="faq-category">Fonctionnement</span>
+                <span class="faq-category">Formations</span>
+                <span class="faq-category">Tarifs</span>
+                <span class="faq-category">Technique</span>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Question 1 -->
+                <div class="faq-item fade-in">
+                    <h3>Comment fonctionne l'IA de Bravoo ?</h3>
+                    <p>L'IA de Bravoo analyse ton niveau initial via un diagnostic de 5 minutes, identifie tes lacunes, puis génère un plan de révision personnalisé. Elle adapte les quiz en temps réel selon tes réponses, relance les notions mal maîtrisées au bon moment (répétition espacée), et te guide chaque jour vers tes objectifs. Plus tu utilises Bravoo, plus l'IA affine sa compréhension de ton profil.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="faq-item fade-in">
+                    <h3>Quelles matières et formations sont disponibles ?</h3>
+                    <p>Bravoo couvre 50+ formations : Collège (Brevet, 6ème-3ème), Lycée (Bac général/techno/pro), BTS & DUT, Prépa Concours (CRPE, Infirmier, Police, Gendarmerie...), Code de la route (Auto, Moto, Bateau), Langues (TOEIC, DELF, Anglais, Espagnol...), Orthographe (Certificat Voltaire), et Primaire (CM1, CM2). Toutes les formations sont accessibles avec un seul abonnement.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="faq-item fade-in">
+                    <h3>Est-ce que Bravoo fonctionne pour le code de la route ?</h3>
+                    <p>Oui, parfaitement. Bravoo propose 1 000+ questions officielles pour le code auto (ETG), moto (ETM) et bateau. L'IA identifie les thèmes où tu fais le plus d'erreurs (priorités, panneaux, stationnement...) et te relance dessus jusqu'à ce que tu les maîtrises. Plusieurs utilisateurs ont eu leur code en 2-3 semaines avec Bravoo.</p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="faq-item fade-in">
+                    <h3>Combien coûte Bravoo ?</h3>
+                    <p>3,99€ par semaine, soit environ 15,96€ par mois. Pas de frais cachés, pas d'engagement. Tu résiles quand tu veux en 1 clic. La 1ère session est gratuite et sans carte bancaire, pour que tu puisses tester avant de t'abonner.</p>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="faq-item fade-in">
+                    <h3>Comment résilier mon abonnement ?</h3>
+                    <p>Depuis ton compte, clique sur "Résilier l'abonnement". C'est tout. Aucun préavis, aucune justification à donner, aucun email à envoyer. La résiliation est immédiate et tu peux continuer à utiliser Bravoo jusqu'à la fin de ta période payée.</p>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="faq-item fade-in">
+                    <h3>Mes données personnelles sont-elles sécurisées ?</h3>
+                    <p>Oui, à 100%. Tes données sont chiffrées, stockées en Europe (RGPD compliant), et ne sont jamais revendues. Seule l'IA utilise tes résultats pour personnaliser ton coaching. Tu peux demander la suppression de tes données à tout moment via contact@bravoo.com.</p>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="faq-item fade-in">
+                    <h3>À partir de quel âge peut-on utiliser Bravoo ?</h3>
+                    <p>Bravoo est conçu pour les élèves dès le CM1 (9-10 ans) jusqu'aux adultes préparant des concours ou le code de la route. Les contenus sont adaptés à chaque niveau. Pour les enfants de moins de 13 ans, l'accord d'un parent est nécessaire (conformément au RGPD).</p>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="faq-item fade-in">
+                    <h3>Bravoo fonctionne-t-il sur mobile et ordinateur ?</h3>
+                    <p>Oui, sur tous les appareils. Bravoo est une application web responsive : elle s'adapte automatiquement à ton téléphone (iOS, Android), ta tablette, ou ton ordinateur (Windows, Mac, Linux). Tu peux commencer un quiz sur mobile et le terminer sur ordinateur, la progression est synchronisée.</p>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="faq-item fade-in">
+                    <h3>Puis-je utiliser Bravoo hors ligne ?</h3>
+                    <p>Pour l'instant, Bravoo nécessite une connexion internet car l'IA fonctionne en temps réel. Nous travaillons sur un mode hors ligne pour les quiz et fiches de révision, qui sera disponible prochainement.</p>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="faq-item fade-in">
+                    <h3>Les parents peuvent-ils suivre la progression de leur enfant ?</h3>
+                    <p>Oui, un espace parent est disponible. Tu peux créer un compte parent et y associer le compte de ton enfant. Tu auras accès à ses statistiques (temps de révision, notions maîtrisées, quiz réalisés), sans voir le détail de ses réponses pour préserver sa motivation et son autonomie.</p>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="faq-item fade-in">
+                    <h3>Bravoo remplace-t-il un vrai professeur ?</h3>
+                    <p>Bravoo ne remplace pas un prof humain, mais le complète. L'IA est excellente pour réviser, mémoriser, s'entraîner, identifier ses lacunes et rester motivé au quotidien. Pour des explications très complexes ou un soutien émotionnel fort, un prof humain reste précieux. Bravoo rend ce soutien plus efficace en assurant la régularité des révisions.</p>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="faq-item fade-in">
+                    <h3>Puis-je préparer plusieurs examens en même temps ?</h3>
+                    <p>Oui, sans problème. Tu peux réviser pour le Bac de français le matin, faire du code de la route à midi, et bosser ton TOEIC le soir. L'IA suit ta progression séparément pour chaque formation et adapte le coaching à chacune. Aucun frais supplémentaire.</p>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="faq-item fade-in">
+                    <h3>Que se passe-t-il si je ne suis pas satisfait ?</h3>
+                    <p>Garantie satisfait ou remboursé 30 jours. Si Bravoo ne te convient pas, envoie-nous un email à contact@bravoo.com avec ton nom et ton email d'inscription, et on te rembourse intégralement sous 48h. Aucune justification nécessaire.</p>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="faq-item fade-in">
+                    <h3>Bravoo propose-t-il des préparations aux concours ?</h3>
+                    <p>Oui, plusieurs : CRPE (professeur des écoles), concours Infirmier (IFSI), Police, Gendarmerie, et concours de la Fonction Publique (catégories A, B, C). Chaque prépa inclut des quiz officiels, des fiches de révision thématiques, et un coaching personnalisé selon le type de concours.</p>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="faq-item fade-in">
+                    <h3>Y a-t-il une communauté ou un forum d'entraide ?</h3>
+                    <p>Pas encore, mais c'est prévu pour fin 2025. En attendant, tu peux nous contacter à contact@bravoo.com pour toute question, et nous répondons sous 24h maximum. On prépare également un Discord communautaire pour que les utilisateurs puissent s'entraider.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta-section">
+        <div class="container fade-in">
+            <h2>Tu as encore des questions ?</h2>
+            <p>Contacte-nous à contact@bravoo.com, on répond en moins de 24h</p>
+            <a href="#" class="btn btn-primary">Commencer gratuitement</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                    </div>
+                    <p>Le coach IA qui t'accompagne vers la réussite de tous tes examens. Simple, efficace, personnalisé.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@bravoo.com">contact@bravoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Bravoo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

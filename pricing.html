@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - Bravoo</title>
+    <meta name="description" content="Bravoo est à 3,99€/semaine. Accès illimité à toutes les formations, coaching IA personnalisé, sans engagement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .comparison-section {
+            padding: var(--section-spacing) 0;
+            background: var(--white);
+        }
+
+        .comparison-table {
+            max-width: 900px;
+            margin: 60px auto 0;
+            background: var(--bg-page);
+            border-radius: var(--border-radius-card);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            background: var(--text-primary);
+            color: var(--white);
+            padding: 24px;
+            font-weight: 700;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            align-items: center;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row:nth-child(even) {
+            background: var(--white);
+        }
+
+        .comparison-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .comparison-value {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .check-icon {
+            color: var(--success);
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .cross-icon {
+            color: #EF4444;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .highlight-col {
+            background: var(--bg-section-alt);
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        .faq-pricing-section {
+            padding: var(--section-spacing) 0;
+            background: var(--bg-section-alt);
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius-card);
+            padding: 32px;
+            margin-bottom: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .comparison-header span:nth-child(2),
+            .comparison-row span:nth-child(2) {
+                display: none;
+            }
+
+            .comparison-header span:nth-child(3),
+            .comparison-row span:nth-child(3) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="catalogue.html">Catalogue</a>
+                    <a href="pricing.html">Tarifs</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#" class="cta-nav">Commencer gratuitement</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Pricing -->
+    <section class="hero hero-compact">
+        <div class="container">
+            <div class="section-header">
+                <h1>Un prix simple et transparent</h1>
+                <p>Accès illimité à toutes les formations pour 3,99€/semaine. Pas de frais cachés, résilie quand tu veux.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Card -->
+    <section class="pricing-section pricing-compact">
+        <div class="container">
+            <div class="pricing-card fade-in">
+                <div class="price-tag">3,99€</div>
+                <div class="price-period">par semaine</div>
+                
+                <ul class="price-features">
+                    <li>Accès illimité à toutes les formations</li>
+                    <li>Coaching IA personnalisé 24h/24</li>
+                    <li>Quiz adaptatifs en temps réel</li>
+                    <li>Fiches de révision générées par IA</li>
+                    <li>Podcasts de révision sur mesure</li>
+                    <li>Suivi de progression détaillé</li>
+                    <li>Répétition espacée intelligente</li>
+                    <li>Diagnostic personnalisé inclus</li>
+                    <li>Notifications de coaching quotidiennes</li>
+                    <li>Support prioritaire</li>
+                    <li>Annulation sans engagement</li>
+                </ul>
+
+                <a href="#" class="btn btn-primary">Commencer gratuitement</a>
+                
+                <p class="guarantee">
+                    🎁 1ère session gratuite — sans carte bancaire<br>
+                    ✓ Garantie satisfait ou remboursé 30 jours<br>
+                    ✓ Résiliation en 1 clic, sans préavis
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Bravoo vs les alternatives</h2>
+                <p>Pourquoi Bravoo est le meilleur choix pour réussir tes examens</p>
+            </div>
+
+            <div class="comparison-table fade-in">
+                <div class="comparison-header">
+                    <span></span>
+                    <span>Réviser seul</span>
+                    <span>Prof particulier</span>
+                    <span class="highlight-col">Bravoo</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Prix mensuel</span>
+                    <span class="comparison-value">0€</span>
+                    <span class="comparison-value">200-400€</span>
+                    <span class="comparison-value highlight-col"><strong>15,96€</strong></span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Personnalisation</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value check-icon">✓</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Disponibilité 24h/24</span>
+                    <span class="comparison-value check-icon">✓</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Suivi de progression</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value">Manuel</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Répétition espacée</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Quiz illimités</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value">Limité</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Motivation constante</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value">1-2h/semaine</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Toutes les formations</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value cross-icon">✗</span>
+                    <span class="comparison-value highlight-col check-icon">✓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Pricing -->
+    <section class="faq-pricing-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Questions fréquentes sur le prix</h2>
+            </div>
+
+            <div class="fade-in">
+                <div class="faq-item">
+                    <h3>Pourquoi 3,99€/semaine et pas un prix mensuel ?</h3>
+                    <p>Le prix hebdomadaire est plus flexible et te permet de tester Bravoo sans engagement long. Tu paies semaine par semaine, et tu arrêtes quand tu veux. Pas de prélèvement annuel surprise.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>La 1ère session est vraiment gratuite ?</h3>
+                    <p>Oui, 100% gratuite. Tu peux tester le diagnostic, faire des quiz, discuter avec l'IA, sans même entrer ta carte bancaire. Si ça te plaît, tu continues. Sinon, aucun frais.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Comment résilier mon abonnement ?</h3>
+                    <p>En 1 clic depuis ton compte. Aucun préavis, aucune justification. Tu cliques sur "Résilier", c'est tout. Pas de mail à envoyer, pas de numéro à appeler.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Que couvre exactement l'abonnement ?</h3>
+                    <p>Tout. Toutes les formations (Collège, Lycée, BTS, Concours, Code, Langues, Orthographe, Primaire), tout le coaching IA, tous les quiz, toutes les fiches, tous les podcasts. Aucune limitation, aucun module payant en plus.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Y a-t-il une garantie satisfait ou remboursé ?</h3>
+                    <p>Oui, 30 jours. Si Bravoo ne te convient pas, tu nous envoies un email et on te rembourse intégralement, sans poser de questions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Puis-je changer de formation en cours d'abonnement ?</h3>
+                    <p>Oui, autant de fois que tu veux. Tu peux passer du Brevet au Code de la route, puis au TOEIC, sans frais supplémentaires. L'accès est illimité à toutes les formations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta-section">
+        <div class="container fade-in">
+            <h2>Prêt à transformer ta manière de réviser ?</h2>
+            <p>Rejoins les 5 000+ utilisateurs qui progressent chaque jour avec Bravoo</p>
+            <a href="#" class="btn btn-primary">Commencer gratuitement</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                    </div>
+                    <p>Le coach IA qui t'accompagne vers la réussite de tous tes examens. Simple, efficace, personnalisé.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@bravoo.com">contact@bravoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Bravoo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

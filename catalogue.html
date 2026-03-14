@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue des formations - Bravoo</title>
+    <meta name="description" content="Explore toutes les formations disponibles sur Bravoo : Collège, Lycée, BTS, Prépa Concours, Code de la route, Langues, Orthographe, Primaire.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .catalogue-detail-section {
+            padding: var(--section-spacing) 0;
+            background: var(--bg-page);
+        }
+
+        .category-detail {
+            background: var(--white);
+            border-radius: var(--border-radius-card);
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .category-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--bg-section-alt);
+        }
+
+        .category-detail-icon {
+            font-size: 64px;
+        }
+
+        .category-detail-title h2 {
+            margin-bottom: 8px;
+        }
+
+        .category-detail-title p {
+            font-size: 18px;
+        }
+
+        .formations-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .formation-item {
+            background: var(--bg-page);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s;
+        }
+
+        .formation-item:hover {
+            background: var(--bg-section-alt);
+            transform: translateX(4px);
+        }
+
+        .formation-item h4 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .formation-item p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .formation-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .formation-badge {
+            background: var(--primary);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: var(--border-radius-pill);
+        }
+
+        .formation-cta {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .formations-list {
+                grid-template-columns: 1fr;
+            }
+
+            .category-detail {
+                padding: 32px 24px;
+            }
+
+            .category-detail-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="catalogue.html">Catalogue</a>
+                    <a href="pricing.html">Tarifs</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#" class="cta-nav">Commencer gratuitement</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Catalogue -->
+    <section class="hero hero-compact">
+        <div class="container">
+            <div class="section-header">
+                <h1>Toutes nos formations</h1>
+                <p>50+ formations pour tous les examens et tous les niveaux</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue détaillé -->
+    <section class="catalogue-detail-section">
+        <div class="container">
+
+            <!-- Collège -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🎓</div>
+                    <div class="category-detail-title">
+                        <h2>Collège</h2>
+                        <p>De la 6ème à la 3ème · Préparation au Brevet</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Mathématiques</h4>
+                        <p>Algèbre, géométrie, probabilités, fonctions</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">45 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Français</h4>
+                        <p>Grammaire, conjugaison, orthographe, littérature</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">38 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Histoire-Géographie</h4>
+                        <p>De 1914 à nos jours, géographie mondiale</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">32 chapitres</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Sciences (SVT, Physique-Chimie)</h4>
+                        <p>Corps humain, énergie, chimie, génétique</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">28 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lycée -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">📚</div>
+                    <div class="category-detail-title">
+                        <h2>Lycée</h2>
+                        <p>Bac général, technologique et professionnel</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Mathématiques (Spé Maths)</h4>
+                        <p>Analyse, algèbre, probabilités, suites</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">68 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Physique-Chimie</h4>
+                        <p>Mécanique, ondes, chimie organique</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">52 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>SVT</h4>
+                        <p>Génétique, écologie, immunologie</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">48 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Philosophie</h4>
+                        <p>Dissertation, auteurs, concepts clés</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">25 thèmes</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Histoire-Géographie</h4>
+                        <p>XXe siècle, mondialisation, géopolitique</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">42 chapitres</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>SES (Sciences Économiques et Sociales)</h4>
+                        <p>Économie, sociologie, science politique</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">36 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BTS & DUT -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🎯</div>
+                    <div class="category-detail-title">
+                        <h2>BTS & DUT</h2>
+                        <p>Révisions ciblées pour toutes filières</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>BTS MCO (Management Commercial Opérationnel)</h4>
+                        <p>Relation client, management, gestion</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">12 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>BTS NDRC (Négociation et Digitalisation)</h4>
+                        <p>Prospection, négociation, digital</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">11 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>BTS Comptabilité-Gestion</h4>
+                        <p>Comptabilité, fiscalité, contrôle de gestion</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">14 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>BTS SIO (Services Informatiques)</h4>
+                        <p>Développement, infrastructure, cybersécurité</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">10 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prépa Concours -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">📝</div>
+                    <div class="category-detail-title">
+                        <h2>Prépa Concours</h2>
+                        <p>Concours de la fonction publique et grandes écoles</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Concours IFSI (Infirmier)</h4>
+                        <p>Culture sanitaire, maths, tests psychotechniques</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">8 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Concours CRPE (Professeur des écoles)</h4>
+                        <p>Français, maths, culture générale</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">12 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Concours Police / Gendarmerie</h4>
+                        <p>Tests psychotechniques, culture générale</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">6 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Concours Fonction Publique (Cat. A, B, C)</h4>
+                        <p>QCM, français, culture générale</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">9 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code de la route -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🚗</div>
+                    <div class="category-detail-title">
+                        <h2>Code de la route</h2>
+                        <p>Auto, Moto, Bateau — Réussis ton code du premier coup</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Code de la route Auto (ETG)</h4>
+                        <p>1 000+ questions officielles, séries thématiques</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">10 thèmes</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Code Moto (ETM)</h4>
+                        <p>Spécificités moto, situations de conduite</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">9 thèmes</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Permis Bateau (Option Côtière)</h4>
+                        <p>Navigation, réglementation, sécurité</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">6 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🌍</div>
+                    <div class="category-detail-title">
+                        <h2>Langues</h2>
+                        <p>TOEIC, DELF, langues étrangères — Progresse rapidement</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>TOEIC (Anglais professionnel)</h4>
+                        <p>Listening, Reading, vocabulaire business</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">800+ exercices</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>DELF B1/B2 (Français Langue Étrangère)</h4>
+                        <p>Compréhension, production écrite et orale</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">12 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Anglais courant (A1 à C1)</h4>
+                        <p>Grammaire, vocabulaire, conversation</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">60 leçons</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Espagnol (A1 à B2)</h4>
+                        <p>Grammaire, conjugaison, vocabulaire</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">48 leçons</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orthographe -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">✏️</div>
+                    <div class="category-detail-title">
+                        <h2>Orthographe</h2>
+                        <p>Certificat Voltaire — Maîtrise la langue française</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Préparation Certificat Voltaire</h4>
+                        <p>Grammaire, orthographe, conjugaison</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">500+ règles</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Orthographe professionnelle</h4>
+                        <p>Email, rapport, rédaction pro</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">25 modules</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primaire -->
+            <div class="category-detail fade-in">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🏫</div>
+                    <div class="category-detail-title">
+                        <h2>Primaire</h2>
+                        <p>CM1, CM2 — Consolider les bases</p>
+                    </div>
+                </div>
+                <div class="formations-list">
+                    <div class="formation-item">
+                        <h4>Mathématiques CM1/CM2</h4>
+                        <p>Calcul, géométrie, mesures, problèmes</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">40 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                    <div class="formation-item">
+                        <h4>Français CM1/CM2</h4>
+                        <p>Grammaire, conjugaison, vocabulaire</p>
+                        <div class="formation-meta">
+                            <span class="formation-badge">35 notions</span>
+                            <a href="#" class="formation-cta">Commencer →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta-section">
+        <div class="container fade-in">
+            <h2>Prêt à commencer ?</h2>
+            <p>Choisis ta formation et lance ton diagnostic en 5 minutes</p>
+            <a href="#" class="btn btn-primary">Commencer gratuitement</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                    </div>
+                    <p>Le coach IA qui t'accompagne vers la réussite de tous tes examens. Simple, efficace, personnalisé.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@bravoo.com">contact@bravoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Bravoo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

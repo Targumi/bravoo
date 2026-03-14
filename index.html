@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bravoo - Ton prof IA personnel pour réussir tous tes examens</title>
+    <meta name="description" content="Bravoo est le coach IA personnalisé qui t'accompagne vers la réussite : Brevet, Bac, BTS, concours, code de la route... 50 000+ utilisateurs, 4.9/5 sur 1 200+ avis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="phone-animation.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bravoo",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1200"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="catalogue.html">Catalogue</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#" class="cta-nav">Commencer</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Réussis enfin tes examens sans galérer</h1>
+                    <p class="hero-subtitle">Brevet, Bac, BTS, concours, code... Une IA qui comprend tes difficultés et te guide chaque jour. Pas de stress, juste des résultats.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#" class="btn btn-primary">Commencer</a>
+                    </div>
+
+                    <div class="trust-badges">
+                        <span>✓ Recommandé par 97% des utilisateurs</span>
+                        <span>· Noté 4.9/5</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50 000+</span>
+                            <span class="stat-label">Utilisateurs</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Formations</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9★</span>
+                            <span class="stat-label">1 200+ avis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-3d-container">
+                    <div class="phone-3d">
+                        <div class="phone-screen">
+                            <div class="dynamic-island"></div>
+                            <div class="phone-content">
+                                
+                                <!-- ÉCRAN 1 (0-3s) : ACCUEIL PERSONNALISÉ -->
+                                <div class="screen-state screen-home">
+                                    <div class="app-header">
+                                        <div class="app-logo">Bravoo</div>
+                                        <div class="app-profile-icon">👤</div>
+                                    </div>
+
+                                    <div class="greeting-text">Salut Manon ! 👋</div>
+                                    <div class="section-title">Ton programme du jour :</div>
+
+                                    <div class="subject-cards">
+                                        <div class="subject-card card-1">
+                                            <div class="subject-header">
+                                                <span class="subject-emoji">📐</span>
+                                                <span class="subject-name">Maths</span>
+                                            </div>
+                                            <div class="subject-topic">Théorème de Pythagore</div>
+                                            <div class="progress-wrapper">
+                                                <div class="progress-fill" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="subject-card card-2">
+                                            <div class="subject-header">
+                                                <span class="subject-emoji">🔬</span>
+                                                <span class="subject-name">Physique</span>
+                                            </div>
+                                            <div class="subject-topic">Forces et mouvements</div>
+                                            <div class="progress-wrapper">
+                                                <div class="progress-fill" style="width: 30%;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="subject-card card-3">
+                                            <div class="subject-header">
+                                                <span class="subject-emoji">📖</span>
+                                                <span class="subject-name">Français</span>
+                                            </div>
+                                            <div class="subject-topic">Les figures de style</div>
+                                            <div class="progress-wrapper">
+                                                <div class="progress-fill" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="streak-badge">🔥 Série de 12 jours</div>
+                                </div>
+
+                                <!-- ÉCRAN 2 (3-6s) : COACHING IA (CHAT) -->
+                                <div class="screen-state screen-chat">
+                                    <div class="chat-header">📐 Mathématiques</div>
+
+                                    <div class="chat-messages">
+                                        <div class="chat-bubble ai-bubble bubble-1">
+                                            <div class="bubble-content">Le théorème de Pythagore dit que dans un triangle rectangle : a² + b² = c²</div>
+                                        </div>
+
+                                        <div class="chat-triangle-illus">
+                                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                                <path d="M10 50 L10 10 L50 50 Z" stroke="#1DB954" stroke-width="2" fill="rgba(29,185,84,0.1)"/>
+                                                <text x="8" y="32" font-size="9" fill="#1DB954" font-weight="600">a</text>
+                                                <text x="28" y="58" font-size="9" fill="#1DB954" font-weight="600">b</text>
+                                                <text x="32" y="32" font-size="9" fill="#1DB954" font-weight="600">c</text>
+                                            </svg>
+                                        </div>
+
+                                        <div class="chat-bubble user-bubble bubble-2">
+                                            <div class="bubble-content">Et si c = 5 et a = 3 ?</div>
+                                        </div>
+
+                                        <div class="chat-typing bubble-3">
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ÉCRAN 3 (6-9s) : QUIZ INTERACTIF -->
+                                <div class="screen-state screen-quiz">
+                                    <div class="quiz-progress-header">
+                                        <span class="quiz-count">Question 3/10</span>
+                                        <div class="quiz-progress-bar">
+                                            <div class="quiz-progress-fill"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="quiz-question-text">Si a = 3 et b = 4, combien vaut c ?</div>
+
+                                    <div class="quiz-options">
+                                        <div class="quiz-option opt-1 correct">5</div>
+                                        <div class="quiz-option opt-2">6</div>
+                                        <div class="quiz-option opt-3">7</div>
+                                        <div class="quiz-option opt-4">12</div>
+                                    </div>
+
+                                    <div class="quiz-feedback">✅ Bravo ! c = √(9+16) = √25 = 5</div>
+                                </div>
+
+                                <!-- ÉCRAN 4 (9-12s) : FLASHCARD (FLIP 3D) -->
+                                <div class="screen-state screen-flashcard">
+                                    <div class="flashcard-wrapper">
+                                        <div class="flashcard">
+                                            <div class="flashcard-front">
+                                                <div class="flashcard-question">Qu'est-ce que l'hypoténuse ?</div>
+                                            </div>
+                                            <div class="flashcard-back">
+                                                <div class="flashcard-answer">Le côté le plus long d'un triangle rectangle, opposé à l'angle droit</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flashcard-actions">
+                                        <button class="fc-btn fc-hard">😕 À revoir</button>
+                                        <button class="fc-btn fc-good">👍 Compris</button>
+                                        <button class="fc-btn fc-easy">🔥 Facile</button>
+                                    </div>
+                                </div>
+
+                                <!-- ÉCRAN 5 (12-15s) : RÉSULTATS / PROGRESSION -->
+                                <div class="screen-state screen-results">
+                                    <div class="results-container">
+                                        <div class="results-emoji">🎉</div>
+                                        <div class="results-title">Session terminée !</div>
+                                        
+                                        <div class="xp-badge">+25 XP</div>
+
+                                        <div class="results-stats">
+                                            <div class="stat-line">8/10 bonnes réponses</div>
+                                            <div class="stat-line">Niveau 7 → Niveau 8</div>
+                                            <div class="level-progress-bar">
+                                                <div class="level-progress-fill"></div>
+                                            </div>
+                                            <div class="stat-line streak">🔥 Série : 12 jours</div>
+                                        </div>
+
+                                        <button class="continue-btn">Continuer →</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticker/Marquee Section -->
+    <section class="ticker-section">
+        <div class="ticker-content">
+            <span class="ticker-item">50 000+ étudiants</span>
+            <span class="ticker-item">4.9/5 sur 1 200+ avis</span>
+            <span class="ticker-item">Recommandé par 97% des utilisateurs</span>
+            <span class="ticker-item">Disponible 24h/24</span>
+            <span class="ticker-item">50 000+ étudiants</span>
+            <span class="ticker-item">4.9/5 sur 1 200+ avis</span>
+            <span class="ticker-item">Recommandé par 97% des utilisateurs</span>
+            <span class="ticker-item">Disponible 24h/24</span>
+        </div>
+    </section>
+
+    <!-- Press Logos -->
+    <section class="press-section">
+        <div class="container">
+            <div class="press-label">Vu dans</div>
+            <div class="press-logos">
+                <span class="press-logo">Le Monde</span>
+                <span class="press-logo">BFM TV</span>
+                <span class="press-logo">France Inter</span>
+                <span class="press-logo">20 Minutes</span>
+                <span class="press-logo">Le Figaro Étudiant</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section class="catalogue-section" id="catalogue">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Prépare n'importe quel examen avec Bravoo</h2>
+                <p>Plus de 50 formations disponibles, du collège aux concours pro</p>
+            </div>
+
+            <div class="catalogue-grid">
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></div>
+                    <h3>Collège</h3>
+                    <p>Brevet, 6ème à 3ème</p>
+                    <span class="catalogue-badge">120+ notions</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+                    <h3>Lycée</h3>
+                    <p>Bac général, techno, pro</p>
+                    <span class="catalogue-badge">200+ notions</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                    <h3>BTS & DUT</h3>
+                    <p>Toutes filières</p>
+                    <span class="catalogue-badge">15+ modules</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg></div>
+                    <h3>Prépa Concours</h3>
+                    <p>CRPE, Police, Infirmier...</p>
+                    <span class="catalogue-badge">10+ concours</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10l-3-5H7L4 10l-2.5 1.1C.7 11.3 0 12.1 0 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
+                    <h3>Code de la route</h3>
+                    <p>Auto, Moto, Bateau</p>
+                    <span class="catalogue-badge">1 000+ questions</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>Langues</h3>
+                    <p>TOEIC, DELF, Anglais...</p>
+                    <span class="catalogue-badge">8+ langues</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></div>
+                    <h3>Orthographe</h3>
+                    <p>Certificat Voltaire</p>
+                    <span class="catalogue-badge">500+ règles</span>
+                </div>
+
+                <div class="catalogue-card fade-in">
+                    <div class="catalogue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                    <h3>Primaire</h3>
+                    <p>CM1, CM2</p>
+                    <span class="catalogue-badge">80+ notions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="how-section" id="comment-ca-marche">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Simple, efficace, et ça marche vraiment</h2>
+                <p>4 étapes pour arrêter de stresser et enfin progresser</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card fade-in">
+                    <div class="step-number">01</div>
+                    <h3>Tu choisis ton objectif</h3>
+                    <p>Brevet, Bac, code, concours... Dis-nous ce que tu prépares et c'est parti</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-number">02</div>
+                    <h3>L'IA identifie tes faiblesses</h3>
+                    <p>Un diagnostic rapide pour savoir exactement où tu dois progresser</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-number">03</div>
+                    <h3>Tu reçois ton plan personnalisé</h3>
+                    <p>Chaque jour, on te dit quoi réviser. Plus besoin de chercher, tu suis</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-number">04</div>
+                    <h3>Tu vois tes résultats monter</h3>
+                    <p>+2.3 points de moyenne en 6 semaines. Tes parents vont être choqués</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section app en action supprimée — le mockup hero suffit -->
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Pourquoi Bravoo va changer ta vie scolaire</h2>
+                <p>Parce que réviser ne doit plus être une corvée</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
+                    <h3>IA personnalisée</h3>
+                    <p>S'adapte à ton niveau et à tes lacunes pour un coaching sur mesure</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></div>
+                    <h3>Répétition espacée</h3>
+                    <p>Révise au bon moment pour ancrer tes connaissances durablement</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                    <h3>50+ formations</h3>
+                    <p>Brevet, Bac, BTS, concours, code, langues... tout est couvert</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h3>Disponible 24h/24</h3>
+                    <p>Révise quand tu veux, où tu veux, depuis ton téléphone</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                    <h3>Suivi de progression</h3>
+                    <p>Vois tes progrès en temps réel et reste motivé chaque jour</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></div>
+                    <h3>Simple et rapide</h3>
+                    <p>Commence en 2 minutes, l'IA s'occupe du reste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-banner fade-in">
+                <h2>4.9/5 basé sur 1 200+ avis</h2>
+                <p>Recommandé par 97% de nos utilisateurs</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"J'étais en galère totale en physique (8 de moyenne). Bravoo m'a aidée à comprendre enfin ce que je ratais. Résultat : bac mention bien. J'y crois encore pas."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Léa D.</span>
+                            <span class="author-context">Terminale · Paris</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Mon fils détestait réviser. Depuis qu'il utilise Bravoo, il a gagné 3 points de moyenne et surtout : il bosse tout seul. C'est mon meilleur investissement de l'année."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Christine M.</span>
+                            <span class="author-context">Maman · Lyon</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"J'ai eu mon code en 2 semaines de révision avec Bravoo. L'IA cible exactement les thèmes où je me plante."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Karim</span>
+                            <span class="author-context">22 ans</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Le coaching quotidien m'a permis de valider mon BTS sans stress. Les flashcards sont addictives."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Hugo</span>
+                            <span class="author-context">Étudiant BTS MCO</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"j'ai eu 16 au brevet blanc alors que j'étais à 10 avant bravoo jsuis trop content 😭"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Mathis</span>
+                            <span class="author-context">Élève de 3ème</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"J'ai décroché le concours d'entrée IFSI grâce à la prépa sur Bravoo. Le programme personnalisé fait toute la différence."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Sarah</span>
+                            <span class="author-context">Étudiante infirmière</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Passé de 650 à 820 au TOEIC en 3 mois. L'IA a compris que mon point faible c'était le listening."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Thomas</span>
+                            <span class="author-context">28 ans · Cadre</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Ma fille en CM2 adore les quiz. Elle révise en s'amusant et a gagné 2 points de moyenne."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Nathalie</span>
+                            <span class="author-context">Maman</span>
+                        </div>
+                        <span class="verified-badge">✓ Avis vérifié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stats-item fade-in">
+                    <h3>50 000+</h3>
+                    <p>Utilisateurs accompagnés</p>
+                </div>
+                <div class="stats-item fade-in">
+                    <h3>+2.3</h3>
+                    <p>Points de moyenne gagnés</p>
+                </div>
+                <div class="stats-item fade-in">
+                    <h3>50+</h3>
+                    <p>Formations disponibles</p>
+                </div>
+                <div class="stats-item fade-in">
+                    <h3>1 200+</h3>
+                    <p>Avis vérifiés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta-section">
+        <div class="container fade-in">
+            <h2>Ton prochain examen se prépare ici</h2>
+            <p>Rejoins les 50 000+ étudiants qui ont transformé leur manière de réviser</p>
+            <a href="#" class="btn btn-primary">Commencer</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-brav">Brav</span><span class="logo-oo">oo</span>
+                    </div>
+                    <p>Le coach IA qui t'accompagne vers la réussite de tous tes examens. Simple, efficace, personnalisé.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <!-- Tarifs supprimés du site — prix uniquement dans l'app -->
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@bravoo.com">contact@bravoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Bravoo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

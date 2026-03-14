@@ -1,0 +1,704 @@
+/* ========================================
+   PHONE MOCKUP APP PROTOTYPE - BRAVOO
+   Animations réalistes sur 15s loop (5 écrans × 3s)
+   ======================================== */
+
+/* ========================================
+   BASE & STRUCTURE
+   ======================================== */
+.phone-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.6s ease;
+}
+
+/* ========================================
+   SÉQUENCE GLOBALE (15s loop)
+   ======================================== */
+
+/* Écran 1 : Accueil (0-3s) */
+.screen-home {
+    animation: showScreen1 15s infinite;
+}
+
+@keyframes showScreen1 {
+    0%, 18% { opacity: 1; }
+    20%, 100% { opacity: 0; }
+}
+
+/* Écran 2 : Chat IA (3-6s) */
+.screen-chat {
+    animation: showScreen2 15s infinite;
+}
+
+@keyframes showScreen2 {
+    0%, 18% { opacity: 0; }
+    20%, 38% { opacity: 1; }
+    40%, 100% { opacity: 0; }
+}
+
+/* Écran 3 : Quiz (6-9s) */
+.screen-quiz {
+    animation: showScreen3 15s infinite;
+}
+
+@keyframes showScreen3 {
+    0%, 38% { opacity: 0; }
+    40%, 58% { opacity: 1; }
+    60%, 100% { opacity: 0; }
+}
+
+/* Écran 4 : Flashcard (9-12s) */
+.screen-flashcard {
+    animation: showScreen4 15s infinite;
+}
+
+@keyframes showScreen4 {
+    0%, 58% { opacity: 0; }
+    60%, 78% { opacity: 1; }
+    80%, 100% { opacity: 0; }
+}
+
+/* Écran 5 : Résultats (12-15s) */
+.screen-results {
+    animation: showScreen5 15s infinite;
+}
+
+@keyframes showScreen5 {
+    0%, 78% { opacity: 0; }
+    80%, 98% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* ========================================
+   ÉCRAN 1 : ACCUEIL PERSONNALISÉ
+   ======================================== */
+
+/* Header app */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.app-logo {
+    font-size: 14px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1DB954, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.app-profile-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Greeting */
+.greeting-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+    animation: fadeInUp 0.6s 0.2s ease-out backwards;
+}
+
+.section-title {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 12px;
+    animation: fadeIn 0.5s 0.3s ease-out backwards;
+}
+
+/* Subject cards (stagger slide-in) */
+.subject-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: auto;
+}
+
+.subject-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    animation: slideInFromBottom 0.5s ease-out backwards;
+}
+
+.subject-card.card-1 { animation-delay: 0.4s; }
+.subject-card.card-2 { animation-delay: 0.55s; }
+.subject-card.card-3 { animation-delay: 0.7s; }
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subject-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.subject-emoji {
+    font-size: 14px;
+}
+
+.subject-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.subject-topic {
+    font-size: 11px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.progress-wrapper {
+    height: 4px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1DB954, #16a34a);
+    border-radius: 4px;
+    transition: width 0.8s ease-out;
+}
+
+/* Streak badge */
+.streak-badge {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    animation: fadeIn 0.5s 0.9s ease-out backwards;
+}
+
+/* ========================================
+   ÉCRAN 2 : COACHING IA (CHAT)
+   ======================================== */
+
+.chat-header {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 14px;
+    text-align: center;
+    animation: fadeInDown 0.4s ease-out;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-bubble {
+    border-radius: 14px;
+    padding: 10px 12px;
+    max-width: 85%;
+    animation: bubbleAppear 0.5s ease-out backwards;
+}
+
+.ai-bubble {
+    background: #1DB954;
+    color: white;
+    align-self: flex-start;
+}
+
+.user-bubble {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    color: #1f2937;
+    align-self: flex-end;
+}
+
+.bubble-content {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.bubble-1 { animation-delay: 0.3s; }
+.bubble-2 { animation-delay: 1.2s; }
+.bubble-3 { animation-delay: 1.8s; }
+
+@keyframes bubbleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Triangle illustration */
+.chat-triangle-illus {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+    animation: fadeIn 0.6s 0.8s ease-out backwards;
+}
+
+/* Typing indicator */
+.chat-typing {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 10px 14px;
+    align-self: flex-start;
+    display: flex;
+    gap: 4px;
+    max-width: 60px;
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    background: #9ca3af;
+    border-radius: 50%;
+    animation: typingDot 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingDot {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    30% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   ÉCRAN 3 : QUIZ INTERACTIF
+   ======================================== */
+
+.quiz-progress-header {
+    margin-bottom: 14px;
+    animation: fadeInDown 0.4s ease-out;
+}
+
+.quiz-count {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.quiz-progress-bar {
+    height: 4px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quiz-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1DB954, #16a34a);
+    width: 30%;
+    border-radius: 4px;
+}
+
+.quiz-question-text {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.5s 0.2s ease-out backwards;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.quiz-option {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    border: 2px solid transparent;
+    cursor: pointer;
+    animation: slideInOption 0.4s ease-out backwards;
+}
+
+.quiz-option.opt-1 { animation-delay: 0.4s; }
+.quiz-option.opt-2 { animation-delay: 0.5s; }
+.quiz-option.opt-3 { animation-delay: 0.6s; }
+.quiz-option.opt-4 { animation-delay: 0.7s; }
+
+@keyframes slideInOption {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Bonne réponse s'illumine */
+.quiz-option.correct {
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    border-color: #1DB954;
+    animation: 
+        slideInOption 0.4s 0.4s ease-out backwards,
+        correctGlow 0.8s 1.2s ease-out forwards;
+}
+
+@keyframes correctGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(29,185,84,0);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(29,185,84,0.5);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(29,185,84,0.3);
+        transform: scale(1);
+    }
+}
+
+.quiz-feedback {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #1DB954;
+    text-align: center;
+    animation: fadeIn 0.5s 1.4s ease-out backwards;
+}
+
+/* ========================================
+   ÉCRAN 4 : FLASHCARD (FLIP 3D)
+   ======================================== */
+
+.flashcard-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    margin-bottom: 14px;
+}
+
+.flashcard {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cardFlip 3s 0.5s ease-in-out infinite;
+}
+
+@keyframes cardFlip {
+    0%, 40% {
+        transform: rotateY(0deg);
+    }
+    50%, 90% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, rgba(29,185,84,0.1), rgba(22,163,74,0.15));
+}
+
+.flashcard-question,
+.flashcard-answer {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.flashcard-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+    animation: fadeIn 0.5s 0.3s ease-out backwards;
+}
+
+.fc-btn {
+    flex: 1;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fc-btn:hover {
+    transform: scale(1.02);
+}
+
+.fc-btn.fc-good {
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    color: #059669;
+}
+
+/* ========================================
+   ÉCRAN 5 : RÉSULTATS / PROGRESSION
+   ======================================== */
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.results-emoji {
+    font-size: 52px;
+    animation: emojiPop 0.7s ease-out;
+    margin-bottom: 10px;
+}
+
+@keyframes emojiPop {
+    0% {
+        transform: scale(0) rotate(-30deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.15) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.results-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 12px;
+    animation: fadeInUp 0.5s 0.2s ease-out backwards;
+}
+
+.xp-badge {
+    background: linear-gradient(135deg, #1DB954, #16a34a);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(29,185,84,0.3);
+    animation: xpBounce 0.6s 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) backwards;
+}
+
+@keyframes xpBounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.results-stats {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 14px;
+    width: 100%;
+    margin-bottom: 14px;
+    animation: fadeIn 0.5s 0.6s ease-out backwards;
+}
+
+.stat-line {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.stat-line.streak {
+    margin-top: 6px;
+    margin-bottom: 0;
+    color: #ea580c;
+}
+
+.level-progress-bar {
+    height: 6px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.level-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1DB954, #16a34a);
+    border-radius: 6px;
+    width: 0%;
+    animation: progressBarFill 1s 0.9s ease-out forwards;
+}
+
+@keyframes progressBarFill {
+    from { width: 70%; }
+    to { width: 85%; }
+}
+
+.continue-btn {
+    background: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(29,185,84,0.3);
+    animation: fadeIn 0.5s 1.2s ease-out backwards;
+    transition: transform 0.2s;
+}
+
+.continue-btn:hover {
+    transform: scale(1.03);
+}
+
+/* ========================================
+   UTILITAIRES D'ANIMATION
+   ======================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE (très petits écrans)
+   ======================================== */
+@media (max-width: 380px) {
+    .greeting-text { font-size: 14px; }
+    .subject-name { font-size: 11px; }
+    .subject-topic { font-size: 10px; }
+    .bubble-content { font-size: 10px; }
+    .quiz-question-text { font-size: 11px; }
+    .quiz-option { font-size: 12px; }
+    .flashcard-question, .flashcard-answer { font-size: 12px; }
+    .results-title { font-size: 16px; }
+    .xp-badge { font-size: 14px; }
+}
