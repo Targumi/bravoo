@@ -148,6 +148,7 @@ p {
   text-decoration: none;
   color: var(--text-primary);
   transition: transform 0.2s ease;
+  overflow: visible;
 }
 
 .logo:hover {
@@ -170,18 +171,23 @@ p {
   line-height: 1;
   letter-spacing: -2px;
   font-weight: 900;
+  overflow: visible;
+  padding-right: 8px;
+  padding-top: 14px;
 }
 
-/* Graduation cap sur le dernier "o" */
+/* Étoile de réussite sur le logo */
 .logo-oo::after {
-  content: '🎓';
+  content: '★';
   position: absolute;
-  top: -14px;
-  right: -2px;
-  font-size: 16px;
-  -webkit-text-fill-color: initial;
-  transform: rotate(12deg);
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+  top: -12px;
+  right: -4px;
+  font-size: 14px;
+  -webkit-text-fill-color: #F5C518;
+  background: none;
+  -webkit-background-clip: unset;
+  line-height: 1;
+  filter: drop-shadow(0 0 4px rgba(245, 197, 24, 0.5));
 }
 
 .nav-links {
@@ -408,10 +414,22 @@ p {
 
 .hero h1 .word.highlight {
   position: relative;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: linear-gradient(135deg, var(--primary), var(--primary-light), #F5C518, var(--primary));
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: wordReveal 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+             shimmer 3s ease-in-out infinite 0.8s;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
 }
 
 /* Soulignement décoratif qui se DESSINE sous "Réussis" */
@@ -578,8 +596,18 @@ p {
     0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   
-  /* FLOTTEMENT PERMANENT */
-  animation: phoneFloat 6s ease-in-out infinite;
+  /* FLOTTEMENT PERMANENT + GLOW PULSANT */
+  animation: phoneFloat 6s ease-in-out infinite, phoneGlow 4s ease-in-out infinite;
+}
+
+/* Glow vert pulsant derrière le phone */
+@keyframes phoneGlow {
+  0%, 100% {
+    filter: drop-shadow(0 20px 40px rgba(29, 185, 84, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 25px 50px rgba(29, 185, 84, 0.35));
+  }
 }
 
 /* Animation de flottement permanent avec ombre qui bouge */
@@ -626,11 +654,11 @@ p {
   overflow: hidden;
   background: linear-gradient(
     165deg,
-    #FFE5D9 0%,
-    #FFF5E1 25%,
-    #E8F4F8 50%,
-    #FFF0F5 75%,
-    #FFE8CC 100%
+    #1A1A1A 0%,
+    #222222 25%,
+    #1C1C1C 50%,
+    #202020 75%,
+    #1A1A1A 100%
   );
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
@@ -826,8 +854,9 @@ p {
 
 .ticker-item::before {
   content: '★';
-  color: var(--accent);
+  color: #F5C518;
   font-size: 20px;
+  filter: drop-shadow(0 0 4px rgba(245, 197, 24, 0.4));
 }
 
 /* ========================================
@@ -1752,3 +1781,82 @@ p {
     animation: none;
   }
 }
+
+/* ========================================
+   SCROLL PROGRESS BAR
+   ======================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light), #F5C518);
+  z-index: 10000;
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+  transition: width 0.1s ease-out;
+}
+
+/* ========================================
+   PARTICULES FLOTTANTES HERO
+   ======================================== */
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(29, 185, 84, 0.6);
+  animation: particleFloat 12s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), -100px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Positions aléatoires des particules */
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; --tx: 20px; }
+.particle:nth-child(2) { left: 20%; animation-delay: 1.5s; --tx: -30px; }
+.particle:nth-child(3) { left: 30%; animation-delay: 3s; --tx: 40px; }
+.particle:nth-child(4) { left: 40%; animation-delay: 4.5s; --tx: -20px; }
+.particle:nth-child(5) { left: 50%; animation-delay: 6s; --tx: 30px; }
+.particle:nth-child(6) { left: 60%; animation-delay: 7.5s; --tx: -40px; }
+.particle:nth-child(7) { left: 70%; animation-delay: 9s; --tx: 25px; }
+.particle:nth-child(8) { left: 80%; animation-delay: 10.5s; --tx: -35px; }
+.particle:nth-child(9) { left: 15%; animation-delay: 2s; --tx: 15px; }
+.particle:nth-child(10) { left: 25%; animation-delay: 3.5s; --tx: -25px; }
+.particle:nth-child(11) { left: 35%; animation-delay: 5s; --tx: 35px; }
+.particle:nth-child(12) { left: 45%; animation-delay: 6.5s; --tx: -15px; }
+.particle:nth-child(13) { left: 55%; animation-delay: 8s; --tx: 20px; }
+.particle:nth-child(14) { left: 65%; animation-delay: 9.5s; --tx: -30px; }
+.particle:nth-child(15) { left: 75%; animation-delay: 11s; --tx: 40px; }
+.particle:nth-child(16) { left: 85%; animation-delay: 0.5s; --tx: -20px; }
+.particle:nth-child(17) { left: 12%; animation-delay: 2.5s; --tx: 25px; }
+.particle:nth-child(18) { left: 42%; animation-delay: 4s; --tx: -35px; }
+.particle:nth-child(19) { left: 62%; animation-delay: 5.5s; --tx: 30px; }
+.particle:nth-child(20) { left: 82%; animation-delay: 7s; --tx: -25px; }

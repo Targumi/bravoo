@@ -471,7 +471,64 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // SCROLL PROGRESS BAR
+    // ========================================
+    const scrollProgress = document.createElement('div');
+    scrollProgress.classList.add('scroll-progress');
+    document.body.prepend(scrollProgress);
+
+    window.addEventListener('scroll', function() {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.pageYOffset / windowHeight) * 100;
+        scrollProgress.style.width = scrolled + '%';
+    });
+
+    // ========================================
+    // PARTICULES FLOTTANTES DANS LE HERO
+    // ========================================
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection) {
+        const particlesContainer = document.createElement('div');
+        particlesContainer.classList.add('hero-particles');
+        
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particlesContainer.appendChild(particle);
+        }
+        
+        heroSection.appendChild(particlesContainer);
+    }
+
+    // ========================================
+    // CARDS HOVER 3D (CATALOGUE & FEATURES)
+    // ========================================
+    const cards3D = document.querySelectorAll('.catalogue-card, .feature-card');
+    
+    cards3D.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -8;
+            const rotateY = ((x - centerX) / centerX) * 8;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+        });
+    });
+
+    // ========================================
     // LOG READY
     // ========================================
     console.log('🎓 Bravoo V4 — Niveau Agence Premium loaded successfully');
+    console.log('✨ Animations WOW activées : shimmer, glow, particles, 3D hover, scroll progress');
 });

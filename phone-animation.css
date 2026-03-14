@@ -108,7 +108,7 @@
 .app-profile-icon {
     width: 28px;
     height: 28px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(8px);
     border-radius: 50%;
     display: flex;
@@ -121,14 +121,14 @@
 .greeting-text {
     font-size: 16px;
     font-weight: 700;
-    color: #1f2937;
+    color: #FFFFFF;
     margin-bottom: 4px;
     animation: fadeInUp 0.6s 0.2s ease-out backwards;
 }
 
 .section-title {
     font-size: 11px;
-    color: #6b7280;
+    color: #B3B3B3;
     font-weight: 600;
     margin-bottom: 12px;
     animation: fadeIn 0.5s 0.3s ease-out backwards;
@@ -143,11 +143,12 @@
 }
 
 .subject-card {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 12px;
     padding: 10px 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
     animation: slideInFromBottom 0.5s ease-out backwards;
 }
 
@@ -180,18 +181,18 @@
 .subject-name {
     font-size: 12px;
     font-weight: 700;
-    color: #1f2937;
+    color: #FFFFFF;
 }
 
 .subject-topic {
     font-size: 11px;
-    color: #6b7280;
+    color: #B3B3B3;
     margin-bottom: 6px;
 }
 
 .progress-wrapper {
     height: 4px;
-    background: rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.1);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -205,15 +206,16 @@
 
 /* Streak badge */
 .streak-badge {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 8px 14px;
     font-size: 11px;
     font-weight: 700;
-    color: #1f2937;
+    color: #FFFFFF;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
     animation: fadeIn 0.5s 0.9s ease-out backwards;
 }
 
@@ -222,15 +224,16 @@
    ======================================== */
 
 .chat-header {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 12px;
     padding: 10px 12px;
     font-size: 12px;
     font-weight: 700;
-    color: #1f2937;
+    color: #FFFFFF;
     margin-bottom: 14px;
     text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
     animation: fadeInDown 0.4s ease-out;
 }
 
@@ -254,10 +257,11 @@
 }
 
 .user-bubble {
-    background: rgba(255,255,255,0.8);
+    background: #2A2A2A;
     backdrop-filter: blur(8px);
-    color: #1f2937;
+    color: #FFFFFF;
     align-self: flex-end;
+    border: 1px solid rgba(255,255,255,0.06);
 }
 
 .bubble-content {
@@ -290,7 +294,7 @@
 
 /* Typing indicator */
 .chat-typing {
-    background: rgba(255,255,255,0.8);
+    background: #2A2A2A;
     backdrop-filter: blur(8px);
     border-radius: 14px;
     padding: 10px 14px;
@@ -298,6 +302,7 @@
     display: flex;
     gap: 4px;
     max-width: 60px;
+    border: 1px solid rgba(255,255,255,0.06);
 }
 
 .typing-dot {
@@ -334,14 +339,14 @@
 .quiz-count {
     font-size: 11px;
     font-weight: 700;
-    color: #6b7280;
+    color: #B3B3B3;
     display: block;
     margin-bottom: 6px;
 }
 
 .quiz-progress-bar {
     height: 4px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.1);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -354,15 +359,16 @@
 }
 
 .quiz-question-text {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 12px;
     padding: 12px;
     font-size: 12px;
     font-weight: 700;
-    color: #1f2937;
+    color: #FFFFFF;
     margin-bottom: 14px;
     line-height: 1.4;
+    border: 1px solid rgba(255,255,255,0.06);
     animation: fadeIn 0.5s 0.2s ease-out backwards;
 }
 
@@ -374,14 +380,14 @@
 }
 
 .quiz-option {
-    background: rgba(255,255,255,0.9);
+    background: #242424;
     backdrop-filter: blur(8px);
     border-radius: 10px;
     padding: 10px 14px;
     font-size: 13px;
     font-weight: 600;
-    color: #1f2937;
-    border: 2px solid transparent;
+    color: #FFFFFF;
+    border: 2px solid rgba(255,255,255,0.06);
     cursor: pointer;
     animation: slideInOption 0.4s ease-out backwards;
 }
@@ -404,8 +410,9 @@
 
 /* Bonne réponse s'illumine */
 .quiz-option.correct {
-    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    background: rgba(29,185,84,0.2);
     border-color: #1DB954;
+    color: #FFFFFF;
     animation: 
         slideInOption 0.4s 0.4s ease-out backwards,
         correctGlow 0.8s 1.2s ease-out forwards;
@@ -427,7 +434,7 @@
 }
 
 .quiz-feedback {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 10px;
     padding: 10px 12px;
@@ -435,6 +442,7 @@
     font-weight: 600;
     color: #1DB954;
     text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
     animation: fadeIn 0.5s 1.4s ease-out backwards;
 }
 
@@ -477,26 +485,27 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: rgba(255,255,255,0.8);
+    background: #242424;
     backdrop-filter: blur(12px);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
 }
 
 .flashcard-back {
     transform: rotateY(180deg);
-    background: linear-gradient(135deg, rgba(29,185,84,0.1), rgba(22,163,74,0.15));
+    background: #1DB954;
 }
 
 .flashcard-question,
 .flashcard-answer {
     font-size: 13px;
     font-weight: 600;
-    color: #1f2937;
+    color: #FFFFFF;
     text-align: center;
     line-height: 1.5;
 }
@@ -510,14 +519,14 @@
 
 .fc-btn {
     flex: 1;
-    background: rgba(255,255,255,0.8);
+    background: #242424;
     backdrop-filter: blur(8px);
-    border: none;
+    border: 1px solid rgba(255,255,255,0.06);
     border-radius: 10px;
     padding: 10px 6px;
     font-size: 10px;
     font-weight: 600;
-    color: #1f2937;
+    color: #FFFFFF;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -527,8 +536,9 @@
 }
 
 .fc-btn.fc-good {
-    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
-    color: #059669;
+    background: rgba(29,185,84,0.2);
+    color: #1DB954;
+    border-color: #1DB954;
 }
 
 /* ========================================
@@ -567,20 +577,20 @@
 .results-title {
     font-size: 18px;
     font-weight: 800;
-    color: #1f2937;
+    color: #FFFFFF;
     margin-bottom: 12px;
     animation: fadeInUp 0.5s 0.2s ease-out backwards;
 }
 
 .xp-badge {
-    background: linear-gradient(135deg, #1DB954, #16a34a);
+    background: #1DB954;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 800;
     margin-bottom: 16px;
-    box-shadow: 0 4px 12px rgba(29,185,84,0.3);
+    box-shadow: 0 4px 12px rgba(29,185,84,0.4);
     animation: xpBounce 0.6s 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) backwards;
 }
 
@@ -596,31 +606,32 @@
 }
 
 .results-stats {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     border-radius: 14px;
     padding: 14px;
     width: 100%;
     margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
     animation: fadeIn 0.5s 0.6s ease-out backwards;
 }
 
 .stat-line {
     font-size: 11px;
     font-weight: 600;
-    color: #1f2937;
+    color: #FFFFFF;
     margin-bottom: 6px;
 }
 
 .stat-line.streak {
     margin-top: 6px;
     margin-bottom: 0;
-    color: #ea580c;
+    color: #F5C518;
 }
 
 .level-progress-bar {
     height: 6px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.1);
     border-radius: 6px;
     overflow: hidden;
     margin: 8px 0;
